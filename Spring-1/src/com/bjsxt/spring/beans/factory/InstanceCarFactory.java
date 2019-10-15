@@ -1,6 +1,6 @@
-package com.bjsxt.spring.factory;
+package com.bjsxt.spring.beans.factory;
 
-import com.bjsxt.spring.beans.Car;
+import com.bjsxt.spring.beans.beans.Car;
 
 import java.util.HashMap;
 import java.util.Map;

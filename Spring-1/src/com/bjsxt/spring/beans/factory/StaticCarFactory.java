@@ -1,11 +1,11 @@
-package com.bjsxt.spring.factory;
+package com.bjsxt.spring.beans.factory;
 
 /**
  * @author lvyelanshan
  * @create 2019-10-14 19:33
  */
 
-import com.bjsxt.spring.beans.Car;
+import com.bjsxt.spring.beans.beans.Car;
 
 import java.util.HashMap;
 import java.util.Map;

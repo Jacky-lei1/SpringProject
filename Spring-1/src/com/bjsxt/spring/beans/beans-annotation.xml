@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--指定SpringIOC容器扫描的包-->
+    <!--可以通过resource-pattern指定扫描的资源-->
+   <!-- <context:component-scan
+            base-package="com.bjsxt.spring.annotation"
+            resource-pattern="repository/*.class"
+    ></context:component-scan>-->
+
+    <!--context:exclude-filter:子节点排除哪些指定表达式的组件-->
+    <!--context:include-filter:子节点指定包含哪些表达式组件，该子节点需要use-default-filter配合使用
+    使用这个标签时，需要将默认过滤器设为false,表示不会自动去扫描所有类型的注解-->
+    <context:component-scan
+            base-package="com.bjsxt.spring.annotation"
+    >
+
+        <!-- 根据annotation排除
+        <context:exclude-filter type="annotation"
+                                expression="org.springframework.stereotype.Repository"/>
+                  -->
+
+        <!--需要将use-default-filters设为false，表示只扫描当前类下的注解
+        <context:include-filter type="annotation"
+                                expression="org.springframework.stereotype.Repository"/>
+                       -->
+        <!--表示不包含这个接口以及接口实现类的-->
+        <!--<context:exclude-filter type="assignable" expression="UserRepository"/>-->
+
+        <!--表示只包含这个接口以及接口实现类，需要配合use-default-filters="false"使用-->
+        <!--<context:include-filter type="assignable" expression="UserRepository"/>-->
+
+    </context:component-scan>
+</beans>

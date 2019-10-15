@@ -1,4 +1,4 @@
-package com.bjsxt.spring.beans;
+package com.bjsxt.spring.beans.beans;
 
 /**
  * @author lvyelanshan
