@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.bjsxt.spring.beans.Address"
+        p:city="Beijing123" p:street="WuDaoKou" abstract="true"
+    ></bean> <!--这个abstract表示这个bean就是用来被继承的而不能被用来实例化，
+    若某一个bean的class属性没有指定，则该bean必须是一个抽象bean！-->
+
+    <!--bean配置的继承：使用bean的parent属性指定继承哪个bean的配置-->
+    <!--也可覆盖父bean中的属性-->
+    <bean id="address2" p:city="Beijing" p:street="DaZongsi" parent="address"></bean>
+
+</beans>
